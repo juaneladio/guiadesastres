@@ -1,0 +1,15 @@
+{
+  "name": "Guía Desastres",
+  "description": "Información para prevenir y actuar ante desastres: actividad volcánica, aluvión (huayco), granizo y nevadas, helada, incendio urbano, inundación, lluvia intensa, oleaje anómalo, sequía, sismo, tormenta eléctrica, tsunami. A partir de datos de la web del INDECI Perú.",
+  "version": "0.4",
+  "launch_path": "/index.html",
+  "icons": {
+    "60": "/images/icon_60.png",
+    "128": "/images/icon_128.png"
+  },
+  "developer": {
+    "name": "Juan Eladio",
+    "url": "http://mozilla.pe"
+  },
+  "default_locale": "es"
+}
