@@ -62,6 +62,10 @@ document.querySelector('#btn-cap14').addEventListener ('click', function () {
   switchSection();
   document.querySelector('#area-cap14').className = 'container container-current';
 });
+document.querySelector('#btn-phonebook').addEventListener ('click', function () {
+  switchSection();
+  document.querySelector('#area-phonebook').className = 'container container-current';
+});
 
 function switchSection() {
     if (document.querySelector('.container-current'))
