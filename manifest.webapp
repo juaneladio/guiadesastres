@@ -5,9 +5,10 @@
   "launch_path": "/index.html",
   "icons": {
     "32": "/images/icon_32.png",
-    "60": "/images/icon_60.png"
+    "60": "/images/icon_60.png",
     "90": "/images/icon_90.png",
-    "128": "/images/icon_128.png"
+    "120": "/images/icon_120.png",
+    "128": "/images/icon_128.png",
     "256": "/images/icon_256.png"
   },
   "developer": {
