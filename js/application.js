@@ -66,17 +66,13 @@ document.querySelector('#btn-phonebook').addEventListener ('click', function () 
   switchSection();
   document.querySelector('#area-phonebook').className = 'container container-current';
 });
+document.querySelector('#btn-about').addEventListener ('click', function () {
+  switchSection();
+  document.querySelector('#area-about').className = 'container container-current';
+});
 
 function switchSection() {
     if (document.querySelector('.container-current'))
       document.querySelector('.container-current').className = 'container container-hidden';
     document.querySelector('.navbar-collapse').className = 'navbar-collapse collapse';
   };
-/*
-document.querySelector('.navbar-brand').addEventListener ('click', function () {
-    if (document.querySelector('.container-current'))
-      document.querySelector('.container-current').className = 'container container-hidden';
-    document.querySelector('#area-home').className = 'container container-current;';
-  }
-);
-*/
