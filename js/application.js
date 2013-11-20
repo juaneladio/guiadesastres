@@ -79,7 +79,7 @@ function switchSection() {
     document.querySelector('.navbar-collapse').className = 'navbar-collapse collapse';
   };
 
-// Activities: add as contact some numbers
+// 2. Activities: add as contact some numbers
 
 function addContact(number,name) {
   var activity = new MozActivity({
@@ -110,3 +110,24 @@ document.querySelector('#btn-add-116').addEventListener ('click', function () {
 document.querySelector('#btn-add-105').addEventListener ('click', function () {
   addContact("105","Policía Nacional");
 });
+
+// 3. Check battery
+function checkBatteryStatus()
+{
+  var batteryDisplay = document.querySelector("#battery-display");
+  var battery = navigator.battery,
+      batteryLevel = Math.round(battery.level * 100),
+      charging = battery.charging,
+      dischargingTime = parseInt(battery.dischargingTime / 60, 10),
+      batteryInfo;
+  if (batteryLevel <= 50)
+  {
+    batteryInfo = '<p class="alert alert-danger"><span class="glyphicon glyphicon-exclamation-sign"></span> ALERTA: Tu nivel de batería es de ' + batteryLevel + '% ';
+    batteryInfo += 'y te quedan' + dischargingTime + " minutos.";
+    batteryInfo += '<br>Por favor sé muy prudente con el uso de tu celular.</p>';
+    batteryDisplay.innerHTML = batteryInfo;
+    batteryDisplay.style.display = "block";
+  }
+}
+
+checkBatteryStatus();
