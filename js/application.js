@@ -81,7 +81,7 @@ function switchSection() {
 
 // 2. Activities: add as contact some numbers
 
-function addContact(number,name) {
+function addContact(number,name, country) {
   var activity = new MozActivity({
     name: "new",
     data: {
@@ -90,7 +90,7 @@ function addContact(number,name) {
           givenName: "AAA",
           lastName: name,
           tel: number,
-          company: "Emergencias"
+          company: "Emergencias "+country
       }
     }
   });
@@ -104,11 +104,11 @@ function addContact(number,name) {
 }
 
 document.querySelector('#btn-add-116').addEventListener ('click', function () {
-  addContact("116","Bomberos");
+  addContact("116","Bomberos","Perú");
 });
 
 document.querySelector('#btn-add-105').addEventListener ('click', function () {
-  addContact("105","Policía Nacional");
+  addContact("105","Policía Nacional","Perú");
 });
 
 // 3. Check battery
