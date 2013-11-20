@@ -114,20 +114,21 @@ document.querySelector('#btn-add-105').addEventListener ('click', function () {
 // 3. Check battery
 function checkBatteryStatus()
 {
-  var batteryDisplay = document.querySelector("#battery-display");
-  var battery = navigator.battery,
+  if (navigator.battery) {
+    var batteryDisplay = document.querySelector("#battery-display"),
+      battery = navigator.battery,
       batteryLevel = Math.round(battery.level * 100),
-      charging = battery.charging,
-      dischargingTime = parseInt(battery.dischargingTime / 60, 10),
+      dischargingTime = parseInt(battery.dischargingTime / 60, 10), // battery.dischargingTime === Infinity when charged, charging or unavailable
       batteryInfo;
-  if (batteryLevel >= 50)
-  {
-    batteryInfo = '<p class="alert alert-danger"><span class="glyphicon glyphicon-exclamation-sign"></span> ALERTA: Tu nivel de batería es de ' + batteryLevel + '% ';
-    if (!isNaN(dischargingTime)) batteryInfo += 'y te quedan' + dischargingTime + " minutos";
-    batteryInfo += ".";
-    batteryInfo += '<br>Por favor sé muy prudente con el uso de tu celular.</p>';
-    batteryDisplay.innerHTML = batteryInfo;
-    batteryDisplay.style.display = "block";
+    if (batteryLevel <= 50)
+    {
+      batteryInfo = '<p class="alert alert-danger"><span class="glyphicon glyphicon-exclamation-sign"></span> ALERTA: Batería al ' + batteryLevel + '%';
+      if (!isNaN(battery.dischargingTime)) batteryInfo += ' y te quedan ' + dischargingTime + " minutos";
+      batteryInfo += ".";      
+      batteryInfo += '<br>Por favor sé muy prudente con el uso de tu celular.</p>';
+      batteryDisplay.innerHTML = batteryInfo;
+      batteryDisplay.style.display = "block";
+    }
   }
 }
 
