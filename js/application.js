@@ -1,3 +1,5 @@
+// 1. Interaction between pages
+
 document.querySelector('#btn-home').addEventListener ('click', function () {
   switchSection();
   document.querySelector('#area-home').className = 'container container-current';
@@ -76,3 +78,35 @@ function switchSection() {
       document.querySelector('.container-current').className = 'container container-hidden';
     document.querySelector('.navbar-collapse').className = 'navbar-collapse collapse';
   };
+
+// Activities: add as contact some numbers
+
+function addContact(number,name) {
+  var activity = new MozActivity({
+    name: "new",
+    data: {
+      type: "webcontacts/contact",
+        params: {
+          givenName: "AAA",
+          lastName: name,
+          tel: number,
+          company: "Emergencias"
+      }
+    }
+  });
+  activity.onsuccess = function() {
+    var picture = this.result;
+    console.log("A picture has been retrieved");
+  };
+  activity.onerror = function() {
+    console.log(this.error);
+  };  
+}
+
+document.querySelector('#btn-add-116').addEventListener ('click', function () {
+  addContact("116","Bomberos");
+});
+
+document.querySelector('#btn-add-105').addEventListener ('click', function () {
+  addContact("105","Policía Nacional");
+});
