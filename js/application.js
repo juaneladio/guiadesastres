@@ -120,7 +120,7 @@ function checkBatteryStatus()
       batteryLevel = Math.round(battery.level * 100),
       dischargingTime = parseInt(battery.dischargingTime / 60, 10), // battery.dischargingTime === Infinity when charged, charging or unavailable
       batteryInfo;
-    if (batteryLevel <= 100)
+    if (batteryLevel <= 50)
     {
       batteryInfo = '<p class="alert alert-danger"><span class="glyphicon glyphicon-exclamation-sign"></span> ALERTA: Batería al ' + batteryLevel + '%';
       if (!isNaN(dischargingTime)) batteryInfo += ' y te quedan ' + dischargingTime + " minutos";
