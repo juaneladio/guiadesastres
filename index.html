@@ -25,6 +25,12 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li id="btn-home"><a href="#">Inicio</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teléfonos de emergencia <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li id="btn-phonebook-peru"><a href="#">Perú</a></li>
+              </ul>
+            </li>
             <li id="btn-cap00"><a href="#">Recomendaciones generales</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">¿Que hacer en caso de? <b class="caret"></b></a>
@@ -62,7 +68,7 @@
         <div id="battery-display"></div>
         <img src="images/milovanderlinden_worker.svg" width="153" height="211" style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;">
         <p class="alert alert-success"><span class="glyphicon glyphicon-comment"></span> <strong>¡Hola!</strong><br>Elige tu opción pulsando el botón superior izquierdo de la cabecera.</p>
-        <p id="btn-phonebook" style="text-align:center;margin-bottom:20px;"><a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-earphone"></span> <strong>¿Vives en Perú?</strong><br>Números de emergencia</a></p>
+        <p id="btn-phonebook-peru" style="text-align:center;margin-bottom:20px;"><a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-earphone"></span> <strong>¿Vives en Perú?</strong><br>Números de emergencia</a></p>
       </div>
     </div><!-- /.container -->
 
@@ -748,7 +754,7 @@
       </div>
     </div><!-- /.container -->
 
-    <div class="container container-hidden" id="area-phonebook">
+    <div class="container container-hidden" id="area-phonebook-peru">
       <div class="starter-template">
         <h2><span class="glyphicon glyphicon-earphone"></span> Teléfonos de emergencia en Perú</h2>
         <div class="panel panel-primary">

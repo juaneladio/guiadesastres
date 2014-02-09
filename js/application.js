@@ -4,6 +4,10 @@ document.querySelector('#btn-home').addEventListener ('click', function () {
   switchSection();
   document.querySelector('#area-home').className = 'container container-current';
 });
+document.querySelector('#btn-phonebook-peru').addEventListener ('click', function () {
+  switchSection();
+  document.querySelector('#area-phonebook-peru').className = 'container container-current';
+});
 document.querySelector('#btn-cap00').addEventListener ('click', function () {
   switchSection();
   document.querySelector('#area-cap00').className = 'container container-current';
@@ -64,9 +68,9 @@ document.querySelector('#btn-cap14').addEventListener ('click', function () {
   switchSection();
   document.querySelector('#area-cap14').className = 'container container-current';
 });
-document.querySelector('#btn-phonebook').addEventListener ('click', function () {
+document.querySelector('#btn-phonebook-peru').addEventListener ('click', function () {
   switchSection();
-  document.querySelector('#area-phonebook').className = 'container container-current';
+  document.querySelector('#area-phonebook-peru').className = 'container container-current';
 });
 document.querySelector('#btn-about').addEventListener ('click', function () {
   switchSection();
