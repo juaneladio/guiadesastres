@@ -8,6 +8,10 @@ document.querySelector('#btn-phonebook-peru').addEventListener ('click', functio
   switchSection();
   document.querySelector('#area-phonebook-peru').className = 'container container-current';
 });
+document.querySelector('#btn-phonebook-peru-2').addEventListener ('click', function () {
+  switchSection();
+  document.querySelector('#area-phonebook-peru').className = 'container container-current';
+});
 document.querySelector('#btn-cap00').addEventListener ('click', function () {
   switchSection();
   document.querySelector('#area-cap00').className = 'container container-current';
@@ -107,11 +111,11 @@ function addContact(number,name, country) {
   };  
 }
 
-document.querySelector('#btn-add-116').addEventListener ('click', function () {
+document.querySelector('#btn-phonebook-peru-add-116').addEventListener ('click', function () {
   addContact("116","Bomberos","Perú");
 });
 
-document.querySelector('#btn-add-105').addEventListener ('click', function () {
+document.querySelector('#btn-phonebook-peru-add-105').addEventListener ('click', function () {
   addContact("105","Policía Nacional","Perú");
 });
 
