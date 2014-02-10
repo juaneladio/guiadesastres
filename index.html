@@ -28,7 +28,8 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teléfonos de emergencia <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li id="btn-phonebook-peru"><a href="#">Perú</a></li>
+                <li id="btn-phonebook-ar"><a href="#">Argentina</a></li>
+                <li id="btn-phonebook-pe"><a href="#">Perú</a></li>
               </ul>
             </li>
             <li id="btn-cap00"><a href="#">Recomendaciones generales</a></li>
@@ -68,7 +69,15 @@
         <div id="battery-display"></div>
         <img src="images/milovanderlinden_worker.svg" width="153" height="211" style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;">
         <p class="alert alert-success"><span class="glyphicon glyphicon-comment"></span> <strong>¡Hola!</strong><br>Elige tu opción pulsando el botón superior izquierdo de la cabecera.</p>
-        <p id="btn-phonebook-peru-2" style="text-align:center;margin-bottom:20px;"><a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-earphone"></span> <strong>¿Vives en Perú?</strong><br>Números de emergencia</a></p>
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+            Teléfonos de emergencia <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li id="btn-phonebook-ar-2"><a href="#">Argentina</a></li>
+            <li id="btn-phonebook-pe-2"><a href="#">Perú</a></li>
+          </ul>
+        </div>
       </div>
     </div><!-- /.container -->
 
@@ -754,16 +763,16 @@
       </div>
     </div><!-- /.container -->
 
-    <div class="container container-hidden" id="area-phonebook-peru">
+    <div class="container container-hidden" id="area-phonebook-pe">
       <div class="starter-template">
         <h2><span class="glyphicon glyphicon-earphone"></span> Teléfonos de emergencia en Perú</h2>
         <div class="panel panel-primary">
           <div class="panel-heading"><span class="glyphicon glyphicon-phone-alt"></span> Números generales</div>
           <ul class="list-group">
             <li class="list-group-item"><a href="tel:116" class="btn btn-primary"><span class="glyphicon glyphicon-earphone"></span> Bomberos: 116</a>
-            <a href="#" id="btn-phonebook-peru-add-116" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> Añadir a contactos</a></li>
+            <a href="#" id="btn-phonebook-pe-add-116" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> Añadir a contactos</a></li>
             <li class="list-group-item"><a href="tel:105" class="btn btn-primary"><span class="glyphicon glyphicon-earphone"></span> Policía Nacional: 105</a>
-            <a href="#" id="btn-phonebook-peru-add-105" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> Añadir a contactos</a></li>
+            <a href="#" id="btn-phonebook-pe-add-105" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> Añadir a contactos</a></li>
           </ul>
         </div>
         <div class="panel panel-primary">
@@ -822,6 +831,23 @@
           <ul class="list-group">
             <li class="list-group-item"><a href="http://www.indeci.gob.pe/movil/" class="btn btn-primary" target="_blank"><span class="glyphicon glyphicon-phone"></span> Ir a INDECI (web móvil)</a></li>
             <li class="list-group-item"><a href="https://twitter.com/indeciperu" class="btn btn-primary" target="_blank"><span class="glyphicon glyphicon-phone"></span> Ir a Twitter de INDECI</a></li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.container -->
+
+    <div class="container container-hidden" id="area-phonebook-ar">
+      <div class="starter-template">
+        <h2><span class="glyphicon glyphicon-earphone"></span> Teléfonos de emergencia en Argentina</h2>
+        <div class="panel panel-primary">
+          <div class="panel-heading"><span class="glyphicon glyphicon-phone-alt"></span> Números generales</div>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="tel:100" class="btn btn-primary"><span class="glyphicon glyphicon-earphone"></span> Bomberos: 100</a>
+            <a href="#" id="btn-phonebook-ar-add-100" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> Añadir a contactos</a></li>
+            <li class="list-group-item"><a href="tel:101" class="btn btn-primary"><span class="glyphicon glyphicon-earphone"></span> Policía: 101</a>
+            <a href="#" id="btn-phonebook-ar-add-101" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> Añadir a contactos</a></li>
+            <li class="list-group-item"><a href="tel:107" class="btn btn-primary"><span class="glyphicon glyphicon-earphone"></span> Emergencias médicas: 107</a>
+            <a href="#" id="btn-phonebook-ar-add-107" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> Añadir a contactos</a></li>
           </ul>
         </div>
       </div>

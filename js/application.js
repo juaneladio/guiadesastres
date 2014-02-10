@@ -4,14 +4,6 @@ document.querySelector('#btn-home').addEventListener ('click', function () {
   switchSection();
   document.querySelector('#area-home').className = 'container container-current';
 });
-document.querySelector('#btn-phonebook-peru').addEventListener ('click', function () {
-  switchSection();
-  document.querySelector('#area-phonebook-peru').className = 'container container-current';
-});
-document.querySelector('#btn-phonebook-peru-2').addEventListener ('click', function () {
-  switchSection();
-  document.querySelector('#area-phonebook-peru').className = 'container container-current';
-});
 document.querySelector('#btn-cap00').addEventListener ('click', function () {
   switchSection();
   document.querySelector('#area-cap00').className = 'container container-current';
@@ -72,10 +64,6 @@ document.querySelector('#btn-cap14').addEventListener ('click', function () {
   switchSection();
   document.querySelector('#area-cap14').className = 'container container-current';
 });
-document.querySelector('#btn-phonebook-peru').addEventListener ('click', function () {
-  switchSection();
-  document.querySelector('#area-phonebook-peru').className = 'container container-current';
-});
 document.querySelector('#btn-about').addEventListener ('click', function () {
   switchSection();
   document.querySelector('#area-about').className = 'container container-current';
@@ -86,6 +74,41 @@ function switchSection() {
       document.querySelector('.container-current').className = 'container container-hidden';
     document.querySelector('.navbar-collapse').className = 'navbar-collapse collapse';
   };
+
+// 2. Phonebooks
+document.querySelector('#btn-phonebook-pe').addEventListener ('click', function () {
+  switchSection();
+  document.querySelector('#area-phonebook-pe').className = 'container container-current';
+});
+document.querySelector('#btn-phonebook-pe-2').addEventListener ('click', function () {
+  switchSection();
+  document.querySelector('#area-phonebook-pe').className = 'container container-current';
+});
+document.querySelector('#btn-phonebook-pe-add-116').addEventListener ('click', function () {
+  addContact("116","Bomberos","Perú");
+});
+document.querySelector('#btn-phonebook-pe-add-105').addEventListener ('click', function () {
+  addContact("105","Policía Nacional","Perú");
+});
+
+// 2. Phonebooks
+document.querySelector('#btn-phonebook-ar').addEventListener ('click', function () {
+  switchSection();
+  document.querySelector('#area-phonebook-ar').className = 'container container-current';
+});
+document.querySelector('#btn-phonebook-ar-2').addEventListener ('click', function () {
+  switchSection();
+  document.querySelector('#area-phonebook-ar').className = 'container container-current';
+});
+document.querySelector('#btn-phonebook-ar-add-100').addEventListener ('click', function () {
+  addContact("100","Bomberos","Argentina");
+});
+document.querySelector('#btn-phonebook-ar-add-101').addEventListener ('click', function () {
+  addContact("101","Policía","Argentina");
+});
+document.querySelector('#btn-phonebook-ar-add-107').addEventListener ('click', function () {
+  addContact("107","Emergencias médicas","Argentina");
+});
 
 // 2. Activities: add as contact some numbers
 
@@ -111,14 +134,6 @@ function addContact(number,name, country) {
   };  
 }
 
-document.querySelector('#btn-phonebook-peru-add-116').addEventListener ('click', function () {
-  addContact("116","Bomberos","Perú");
-});
-
-document.querySelector('#btn-phonebook-peru-add-105').addEventListener ('click', function () {
-  addContact("105","Policía Nacional","Perú");
-});
-
 // 3. Check battery
 function checkBatteryStatus()
 {
@@ -133,7 +148,7 @@ function checkBatteryStatus()
       batteryInfo = '<p class="alert alert-danger"><span class="glyphicon glyphicon-exclamation-sign"></span> ALERTA: Batería al ' + batteryLevel + '%';
       if (!isNaN(dischargingTime)) batteryInfo += ' y te quedan ' + dischargingTime + " minutos";
       batteryInfo += ".";      
-      batteryInfo += '<br>Por favor sé muy prudente con el uso de tu celular.</p>';
+      batteryInfo += '<br>Por favor sé muy prudente con el uso de tu equipo.</p>';
       batteryDisplay.innerHTML = batteryInfo;
       batteryDisplay.style.display = "block";
     }
